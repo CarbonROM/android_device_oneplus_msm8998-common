@@ -1,0 +1,4 @@
+{
+  "pushCert": "certificate version 0.1\npusher 58AD3CDACC488923 1516160197 -0500\npushee ssh://review.carbonrom.org:29418/CarbonROM/android_device_oneplus_msm8998-common\nnonce 1516160198-0ACAA57BA221F779048DFDB6F3E2AC82E2A689E5\n\n89b1023de887835be4204c0160d5dfe321dcc274 43d6f04763937d9ba7005791124d00273ee33847 refs/heads/cr-6.1\n-----BEGIN PGP SIGNATURE-----\n\niQEzBAABCAAdFiEEYQVPO71c7y9uUbTUWK082sxIiSMFAlpexMUACgkQWK082sxI\niSMdnAf+Nrf2SIfrS31YMU4cxoUs/twONXJF5l+KKpFCbegCs8AnKSvFt0ItgHg3\nQHefYm3UpsRH2PrIYeozNco6IeA5J2QEyIksrkcgVUkTE2tWs5Fs16sEikEj0MJi\nk6JYtKSl1ia5m1dmC4mbfQ5krFjJTTSBUBeBn17tenkKjz8/BphdUWfXaYld1cJo\nWtNOUT+r6g2k1R/bYVCbIOpSlYS5On22SyU093ia9aJ7D9utL1EbjoDGjvtO4jvk\nfF9gZg0Ut+NSzgoLl8ufy4EzXVv0tuCTk57L0VlPc2cVAY6QCen9c8TvAIqtmbPN\nSovlRV1EWAKAhy57zr+j2MmuhCFxug\u003d\u003d\n\u003dZGC3\n-----END PGP SIGNATURE-----\n",
+  "comments": []
+}
