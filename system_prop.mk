@@ -68,7 +68,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.camera \
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.camera,org.omnirom.snap \
     persist.ts.rtmakeup=false
 
 # CNE
