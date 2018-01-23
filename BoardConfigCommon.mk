@@ -280,5 +280,9 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+USE_DEVICE_SPECIFIC_DATA-IPA := true
+DEVICE_SPECIFIC_DATA-IPA_PATH := $(PLATFORM_PATH)/data-ipa-cfg-mgr
+
 # inherit from the proprietary version
 -include vendor/oneplus/msm8998-common/BoardConfigVendor.mk
+
