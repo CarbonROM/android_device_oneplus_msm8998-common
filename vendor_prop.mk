@@ -177,7 +177,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
     ro.am.reschedule_service=true \
     sched.colocate.enable=1 \
-    sys.games.gt.prof=1
+    sys.games.gt.prof=1 \
+    sdm.debug.rotator_downscale=1
 
 # QSEE
 PRODUCT_PROPERTY_OVERRIDES += \
