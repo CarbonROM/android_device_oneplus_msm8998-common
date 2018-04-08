@@ -25,4 +25,7 @@
     <!-- Can the LED pulse ? -->
     <bool name="config_ledCanPulse">true</bool>
 
+    <!-- Whether the device supports Smart Pixels -->
+    <bool name="config_enableSmartPixels">true</bool>
+
 </resources>
