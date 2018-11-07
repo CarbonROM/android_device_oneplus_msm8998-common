@@ -173,7 +173,8 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libtinyxml \
     libqdMetaData \
-    libqdMetaData.system
+    libqdMetaData.system \
+    libvulkan
 
 PRODUCT_PACKAGES += \
     vendor.display.config@1.0 \
