@@ -180,8 +180,8 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.0_vendor
 
 # Doze
-PRODUCT_PACKAGES += \
-    Doze
+#PRODUCT_PACKAGES += \
+#    Doze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -278,11 +278,8 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay native
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@1.0-service-sdm \
-    vendor.lineage.livedisplay-V1.0-java
+    libjni_livedisplay
 
-PRODUCT_BOOT_JARS += \
-    vendor.lineage.livedisplay-V1.0-java
 
 # Media
 PRODUCT_COPY_FILES += \
