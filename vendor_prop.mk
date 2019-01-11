@@ -99,6 +99,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Data
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.use_data_netmgrd=true \
+    ro.com.android.mobiledata=false \
     persist.data.netmgrd.qos.enable=true \
     persist.data.mode=concurrent
 
