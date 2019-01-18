@@ -103,10 +103,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Data
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.use_data_netmgrd=true \
     ro.com.android.mobiledata=false \
     persist.data.netmgrd.qos.enable=true \
-    persist.data.mode=concurrent
+    persist.data.mode=concurrent \
+    persist.vendor.data.mode=concurrent \
+    ro.use_data_netmgrd=true \
+    ro.vendor.use_data_netmgrd=true
 
 # DPM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -203,18 +205,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.rild.nitz_short_ons_3="" \
     ril.subscription.types=NV,RUIM \
     ro.telephony.default_network=22,20 \
-    telephony.lteOnCdmaDevice=1 \
+    telephony.lteOnCdmaDevice=1,1 \
     keyguard.no_require_sim=true \
     ro.com.android.dataroaming=true \
     persist.sys.oem_smooth=1 \
-    persist.radio.VT_CAM_INTERFACE=1 \
+    persist.radio.VT_CAM_INTERFACE=1 \
     persist.radio.apm_sim_not_pwdn=1 \
     persist.radio.efssync=true \
     persist.radio.multisim.config=dsds \
+    persist.radio.efssync=true \
     persist.radio.enhance_ecall=true \
     persist.radio.hw_mbn_update=0 \
     persist.radio.sw_mbn_update=0 \
     persist.radio.start_ota_daemon=0 \
+    persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.data_con_rprt=1 \
     persist.vendor.radio.data_ltd_sys_ind=1 \
@@ -222,7 +226,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.sib16_support=1 \
     persist.vendor.radio.bar_fake_gcell=1 \
-    persist.vendor.radio.arfcn_test_mode=3
+    persist.vendor.radio.arfcn_test_mode=3 \
+    persist.vendor.data.iwlan.enable=true
 
 # RmNet Data
 PRODUCT_PROPERTY_OVERRIDES += \
