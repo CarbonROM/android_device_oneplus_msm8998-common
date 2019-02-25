@@ -40,6 +40,8 @@ on early-init
     mount debugfs debugfs /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
 
+    chmod 0444 /proc/cmdline
+
     # Change ownership of hw_recovery related nodes
     chown system graphics /sys/kernel/debug/dri/0/debug/dump
     chown system graphics /sys/kernel/debug/dri/0/debug/recovery_reg
@@ -539,6 +541,7 @@ service qcom-c_core-sh  /vendor/bin/init.qcom.class_core.sh
 
 service qcom-c_main-sh /vendor/bin/init.class_main.sh
     class main
+    group root system radio
     user root
     oneshot
 
