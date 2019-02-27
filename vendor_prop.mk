@@ -94,7 +94,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Connor
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.connor.disable=0
+    persist.vendor.connor.disable=1
 
 # Core control
 PRODUCT_PROPERTY_OVERRIDES += \
