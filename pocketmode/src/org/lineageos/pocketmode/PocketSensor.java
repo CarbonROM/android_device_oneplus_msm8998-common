@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2016 The CyanogenMod Project
- * Copyright (c) 2018 The LineageOS Project
+ * Copyright (c) 2018-2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,12 +22,15 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.text.TextUtils;
 import android.util.Log;
 
-public class ProximitySensor implements SensorEventListener {
+import java.util.List;
+
+public class PocketSensor implements SensorEventListener {
 
     private static final boolean DEBUG = false;
-    private static final String TAG = "PocketModeProximity";
+    private static final String TAG = "PocketSensor";
 
     private static final String CHEESEBURGER_FILE =
             "/sys/devices/soc/soc:fpc_fpc1020/proximity_state";
@@ -39,11 +42,11 @@ public class ProximitySensor implements SensorEventListener {
     private Sensor mSensor;
     private Context mContext;
 
-    public ProximitySensor(Context context) {
+    public PocketSensor(Context context) {
         boolean found = false;
         mContext = context;
         mSensorManager = mContext.getSystemService(SensorManager.class);
-        mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+        mSensor = findSensorWithType("com.oneplus.sensor.pocket");
 
         if (FileUtils.fileExists(CHEESEBURGER_FILE)) {
             FPC_FILE = CHEESEBURGER_FILE;
@@ -63,7 +66,7 @@ public class ProximitySensor implements SensorEventListener {
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        setFPProximityState(event.values[0] < mSensor.getMaximumRange());
+        setFPProximityState(event.values[0] == 1);
     }
 
     @Override
@@ -90,5 +93,18 @@ public class ProximitySensor implements SensorEventListener {
         mSensorManager.unregisterListener(this, mSensor);
         // Ensure FP is left enabled
         setFPProximityState(/* isNear */ false);
+    }
+
+    protected Sensor findSensorWithType(String type) {
+        if (TextUtils.isEmpty(type)) {
+            return null;
+        }
+        List<Sensor> sensorList = mSensorManager.getSensorList(Sensor.TYPE_ALL);
+        for (Sensor s : sensorList) {
+            if (type.equals(s.getStringType())) {
+                return s;
+            }
+        }
+        return null;
     }
 }
