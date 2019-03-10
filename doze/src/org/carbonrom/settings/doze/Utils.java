@@ -25,7 +25,10 @@ import android.content.pm.PackageManager;
 import android.os.UserHandle;
 import android.support.v7.preference.PreferenceManager;
 import android.provider.Settings;
+import android.text.TextUtils;
 import android.util.Log;
+
+import java.util.List;
 
 import static android.provider.Settings.Secure.DOZE_ENABLED;
 
@@ -116,10 +119,14 @@ public final class Utils {
                 || isPocketGestureEnabled(context);
     }
 
-    protected static Sensor getSensor(SensorManager sm, String type) {
-        for (Sensor sensor : sm.getSensorList(Sensor.TYPE_ALL)) {
-            if (type.equals(sensor.getStringType())) {
-                return sensor;
+    protected static Sensor findSensorWithType(SensorManager sensorManager, String type) {
+        if (TextUtils.isEmpty(type)) {
+            return null;
+        }
+        List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ALL);
+        for (Sensor s : sensorList) {
+            if (type.equals(s.getStringType())) {
+                return s;
             }
         }
         return null;
