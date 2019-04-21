@@ -22,6 +22,7 @@
         android:disableDependentsState="true"
         android:title="@string/ambient_display_always_on_title"
         android:summary="@string/ambient_display_always_on_summary"
+        android:icon="@drawable/ic_always_on" 
         android:persistent="false" />
 
     <PreferenceCategory
