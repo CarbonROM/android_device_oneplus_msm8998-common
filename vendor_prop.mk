@@ -20,7 +20,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
-    af.fast_track_multiplier=1 \
+    af.fast_track_multiplier=2 \
     vendor.audio_hal.period_size=192 \
     audio.offload.video=true \
     audio.offload.pcm.16bit.enable=true \
@@ -31,9 +31,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dirac.acs.controller=qem \
     ro.dirac.acs.storeSettings=1 \
     ro.dirac.ignore_error=1 \
-    tunnel.audio.encode=true \
-    nxpWechatDebugEnable=1 \
-    persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
+    tunnel.audio.encode=true
 
 # Audio new
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -86,7 +84,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.camera,com.android.camera,org.lineageos.snap \
-    camera.hal1.packagelist=com.whatsapp \
+    vendor.camera.hal1.packagelist=com.whatsapp \
     persist.camera.mobicat=2 \
     persist.camera.stats.debugexif=3080192 \
     persist.ts.rtmakeup=false \
@@ -110,7 +108,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.netmgrd.qos.enable=true \
     persist.radio.aosp_usr_pref_sel=true \
     persist.vendor.data.mode=concurrent \
-    ro.use_data_netmgrd=true \
     ro.vendor.use_data_netmgrd=true
 
 # DPM
@@ -180,9 +177,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mm.enable.smoothstreaming=true \
     persist.mm.enable.prefetch=true \
     vidc.enc.dcvs.extra-buff-count=2 \
-    persist.media.treble_omx=true \
-    vendor.vidc.debug.level=1 \
-    vendor.swvdec.log.level=1
+    persist.media.treble_omx=true
 
 # NFC
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -220,6 +215,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
     rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
     vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
+    persist.rcs.supported=1 \
     persist.rild.nitz_plmn="" \
     persist.rild.nitz_long_ons_0="" \
     persist.rild.nitz_long_ons_1="" \
@@ -235,32 +231,39 @@ PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
     ro.com.android.dataroaming=true \
     persist.sys.oem_smooth=1 \
+    persist.radio.always_send_plmn=true \
+    persist.radio.calls.on.ims=1 \
     persist.radio.VT_CAM_INTERFACE=1 \
+    persist.radio.VT_ENABLE=1 \
+    persist.radio.VT_HYBRID_ENABLE=1 \
     persist.radio.apm_sim_not_pwdn=1 \
     persist.radio.efssync=true \
     persist.radio.multisim.config=dsds \
-    persist.radio.efssync=true \
     persist.radio.enhance_ecall=true \
     persist.radio.hw_mbn_update=0 \
     persist.radio.sw_mbn_update=0 \
     persist.radio.start_ota_daemon=0 \
+    persist.vendor.ims.dropset_feature=0 \
+    persist.vendor.qti.telephony.vt_cam_interface=1 \
+    persist.vendor.radio.add_power_save=1 \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.data_con_rprt=1 \
     persist.vendor.radio.data_ltd_sys_ind=1 \
+    persist.vendor.radio.force_on_dc=true \
     persist.vendor.radio.ignore_dom_time=10 \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.sib16_support=1 \
     persist.vendor.radio.bar_fake_gcell=1 \
-    persist.vendor.radio.arfcn_test_mode=3
+    persist.vendor.radio.arfcn_test_mode=3 \
+    vendor.service.qti.ims.enabled=1
 
 # Radio - VoLTE / VoWifi
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.dbg.ims_volte_enable=1 \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
     persist.dbg.wfc_avail_ovr=1 \
-    persist.radio.calls.on.ims=1
+    persist.dbg.ims_volte_enable=1
 
 # RmNet Data
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -292,7 +295,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Timeservice
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.delta_time.enable=true
+    persist.timed.enable=true
 
 # Oiface
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -309,27 +312,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # VNDK
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.vndk.version=28
-
-# VoLTE
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.ims.dropset_feature=0 \
-    persist.vendor.radio.add_power_save=1 \
-    persist.vendor.radio.force_on_dc=true \
-    persist.radio.custom_ecc=1 \
-    persist.radio.data_con_rprt=1 \
-    persist.radio.data_ltd_sys_ind=1 \
-    persist.radio.ignore_dom_time=10 \
-    persist.radio.rat_on=combine \
-    persist.radio.sib16_support=1 \
-    persist.radio.RATE_ADAPT_ENABLE=1 \
-    persist.radio.ROTATION_ENABLE=1 \
-    persist.radio.VT_ENABLE=1 \
-    persist.radio.VT_HYBRID_ENABLE=1 \
-    persist.radio.is_wps_enabled=true \
-    persist.radio.videopause.mode=1 \
-    persist.radio.sap_silent_pin=1 \
-    persist.radio.always_send_plmn=true \
-    persist.rcs.supported=0
 
 # Wi-Fi
 PRODUCT_PROPERTY_OVERRIDES += \
