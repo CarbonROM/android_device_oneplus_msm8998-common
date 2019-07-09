@@ -144,20 +144,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.disable_skip_validate=1 \
     vendor.display.enable_default_color_mode=1 \
     vendor.display.perf_hint_window=50 \
-    debug.hwui.use_buffer_age=false \
-    debug.composition.type=c2d \
-    debug.mdpcomp.idletime=600 \
-    persist.hwc.mdpcomp.enable=true \
-    persist.hwc.ptor.enable=true \
-    debug.enable.sglscale=1 \
-    debug.hwui.renderer=opengl \
-    debug.egl.hw=1 \
-    debug.sf.disable_hwc=0 \
-    debug.sf.recomputecrop=0 \
-    debug.sf.disable_backpressure=1 \
-    persist.hwc.mdpcomp.enable=true \
-    persist.hwc.ptor.enable=true \
-    debug.sf.gpu_comp_tiling=1
+    debug.hwui.use_buffer_age=false
 
 # IOP
 PRODUCT_PROPERTY_OVERRIDES += \
