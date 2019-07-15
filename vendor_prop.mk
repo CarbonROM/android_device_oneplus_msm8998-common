@@ -125,7 +125,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.early_phase_offset_ns=5000000 \
     ro.sf.lcd_density=420 \
     ro.opengles.version=196610 \
     ro.sf.hwc_set_default_colormode=true \
