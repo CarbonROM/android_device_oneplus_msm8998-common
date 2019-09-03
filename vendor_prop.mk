@@ -78,6 +78,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     bt.max.hfpclient.connections=1 \
     persist.bt.a2dp_offload_cap=false \
+    persist.bluetooth.bluetooth_audio_hal.disabled=true \
     vendor.qcom.bluetooth.soc=cherokee \
     ro.bluetooth.a4wp=false \
     ro.bluetooth.emb_wp_mode=false \
