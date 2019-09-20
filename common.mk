@@ -417,6 +417,10 @@ PRODUCT_PACKAGES += \
 # Shipping API level (for CTS backward compatibility)
 PRODUCT_SHIPPING_API_LEVEL := 25
 
+# Soong
+PRODUCT_SOONG_NAMESPACES += \
+    device/oneplus/msm8998-common
+
 # Tetheroffload
 PRODUCT_PACKAGES += \
     ipacm \
