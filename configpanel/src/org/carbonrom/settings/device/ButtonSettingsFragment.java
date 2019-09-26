@@ -18,20 +18,20 @@
 package org.carbonrom.settings.device;
 
 import android.os.Bundle;
-import android.support.v14.preference.PreferenceFragment;
-import android.support.v14.preference.SwitchPreference;
-import android.support.v7.preference.ListPreference;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v7.preference.PreferenceGroup;
 import android.text.TextUtils;
 import android.view.MenuItem;
+import androidx.preference.PreferenceFragment;
+import androidx.preference.SwitchPreference;
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.PreferenceGroup;
 
 import com.android.internal.util.cr.FileUtils;
 import org.carbonrom.settings.device.utils.Constants;
 
 public class ButtonSettingsFragment extends PreferenceFragment
-        implements OnPreferenceChangeListener {
+        implements Preference.OnPreferenceChangeListener {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
