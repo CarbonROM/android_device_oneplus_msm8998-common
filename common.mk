@@ -400,9 +400,9 @@ PRODUCT_PACKAGES += \
     libxml2 \
     libprotobuf-cpp-full
 
-# IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
+    ims-ext-common_system \
     telephony-ext \
     ims_ext_common.xml \
     qti-telephony-hidl-wrapper \
@@ -410,7 +410,9 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils \
     qti_telephony_utils.xml
 
+
 PRODUCT_BOOT_JARS += \
+    ims-ext-common_system \
     telephony-ext
 
 # Seccomp policy
