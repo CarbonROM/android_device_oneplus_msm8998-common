@@ -76,9 +76,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.bluetooth.bluetooth_audio_hal.disabled=true \
     bt.max.hfpclient.connections=1 \
     persist.bt.a2dp_offload_cap=false \
-    persist.bluetooth.bluetooth_audio_hal.disabled=true \
     vendor.qcom.bluetooth.soc=cherokee \
     ro.bluetooth.a4wp=false \
     ro.bluetooth.emb_wp_mode=false \
@@ -96,6 +96,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.stats.debugexif=3080192 \
     persist.ts.rtmakeup=false \
     persist.vendor.camera.tintless.skip=1
+
+# Codec2 switch
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.media.codec2=2
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -212,7 +216,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
     rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
     vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
-    persist.rcs.supported=1 \
     persist.rild.nitz_plmn="" \
     persist.rild.nitz_long_ons_0="" \
     persist.rild.nitz_long_ons_1="" \
@@ -229,21 +232,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
     ro.com.android.dataroaming=true \
     persist.sys.oem_smooth=1 \
-    persist.radio.always_send_plmn=true \
-    persist.radio.calls.on.ims=1 \
-    persist.radio.VT_CAM_INTERFACE=1 \
-    persist.radio.VT_ENABLE=1 \
-    persist.radio.VT_HYBRID_ENABLE=1 \
-    persist.radio.apm_sim_not_pwdn=1 \
+    persist.radio.VT_CAM_INTERFACE=1 \
     persist.radio.efssync=true \
     persist.radio.multisim.config=dsds \
     persist.radio.enhance_ecall=true \
     persist.radio.hw_mbn_update=0 \
     persist.radio.sw_mbn_update=0 \
     persist.radio.start_ota_daemon=0 \
-    persist.vendor.ims.dropset_feature=0 \
-    persist.vendor.qti.telephony.vt_cam_interface=1 \
-    persist.vendor.radio.add_power_save=1 \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.procedure_bytes=SKIP \
@@ -251,12 +246,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.flexmap_type=none \
     persist.vendor.radio.data_con_rprt=1 \
     persist.vendor.radio.data_ltd_sys_ind=1 \
-    persist.vendor.radio.force_on_dc=true \
     persist.vendor.radio.ignore_dom_time=10 \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.sib16_support=1 \
     persist.vendor.radio.bar_fake_gcell=1 \
-    vendor.service.qti.ims.enabled=1\
     persist.vendor.radio.arfcn_test_mode=3 \
     persist.backup.ntpServer=0.pool.ntp.org
 
@@ -272,11 +265,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.df.iwlan_mux=9 \
     persist.data.df.dev_name=rmnet_usb0 \
     persist.vendor.data.iwlan.enable=true
-
-# SDM
-PRODUCT_PROPERTY_OVERRIDES += \
-    sdm.debug.disable_skip_validate=1 \
-    sdm.perf_hint_window=50
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
