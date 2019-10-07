@@ -384,6 +384,10 @@ PRODUCT_PACKAGES += \
     rcs_service_api \
     rcs_service_api.xml
 
+# Rescue party disabled
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.disable_rescue=true
+
 # Recovery
 PRODUCT_PACKAGES += \
     librecovery_updater_oneplus
