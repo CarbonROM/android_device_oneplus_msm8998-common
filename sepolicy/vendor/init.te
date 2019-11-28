@@ -2,3 +2,10 @@ allow init proc_alarm_boot:file { r_file_perms };
 
 allow init sysfs_fpc:file { r_file_perms };
 allow init sysfs_data:file { r_file_perms };
+allow init sysfs:file { setattr };
+allow init sysfs_leds:lnk_file { read };
+allow init hal_fingerprint_hwservice:hwservice_manager add;
+allow init hidl_base_hwservice:hwservice_manager add;
+allow init hwservicemanager:binder { call transfer };
+allow init sysfs:file { open read };
+allow init vendor_file:file { execute execute_no_trans };
