@@ -1,2 +1,3 @@
-# neverallow
+i# neverallow
 #allow surfaceflinger hal_display_config_hwservice:hwservice_manager { add };
+allow surfaceflinger vendor_file:file { execute getattr open read };
