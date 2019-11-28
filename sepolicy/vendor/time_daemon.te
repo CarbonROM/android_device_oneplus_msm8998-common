@@ -1,0 +1,2 @@
+allow time_daemon time_daemon:capability { setgid };
+allow time_daemon self:capability setuid;
