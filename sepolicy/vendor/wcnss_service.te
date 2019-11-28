@@ -1,1 +1,2 @@
 allow wcnss_service sysfs_data:dir { search };
+allow wcnss_service wigig_core_prop:file { getattr open read };
