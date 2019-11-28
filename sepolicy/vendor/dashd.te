@@ -7,6 +7,7 @@ wakelock_use(dashd)
 
 allow dashd kmsg_device:chr_file { rw_file_perms };
 allow dashd dash_device:chr_file { rw_file_perms };
+allow dashd system_data_file:dir { getattr };
 
 r_dir_file(dashd, sysfs_usb_supply);
 r_dir_file(dashd, sysfs_battery_supply);
