@@ -386,10 +386,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
-# Rescue party disabled
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.disable_rescue=true
-
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.2 \
