@@ -1,2 +1,1 @@
 set_prop(netmgrd, diag_prop)
-allow netmgrd system_file:file { execute execute_no_trans getattr open read };
