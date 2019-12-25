@@ -1,2 +1,1 @@
-allow thermal-engine sysfs:dir { open read };
-allow thermal-engine sysfs:file { getattr open read };
+dontaudit thermal-engine sysfs:dir read;
