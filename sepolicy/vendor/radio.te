@@ -1,2 +1,2 @@
 get_prop(radio, qcom_ims_prop)
-allow radio vendor_file:file { execute getattr open read };
+dontaudit radio vendor_file:file { execute getattr open read };
