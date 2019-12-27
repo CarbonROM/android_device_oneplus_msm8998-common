@@ -59,6 +59,9 @@ on init
     chown root system /sys/fs/cgroup/memory/bg/tasks
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
 
+    # set matching swappiness values with kernel
+    write /proc/sys/vm/swappiness 10
+
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
